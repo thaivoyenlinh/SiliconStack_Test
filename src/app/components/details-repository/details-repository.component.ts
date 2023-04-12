@@ -1,16 +1,10 @@
 import { TagPlaceholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-<<<<<<< HEAD
-import { type } from 'os';
-import { map, tap } from 'rxjs/operators';
-import { GithubService } from 'src/app/services/github/github.service';
-=======
 import { GithubService } from 'src/app/services/github/github.service';
 import { LoadingService } from '../loading/loading.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ToastMessageComponent } from '../toast-message/toast-message.component';
->>>>>>> 01374d7 (update test)
 
 @Component({
   selector: 'app-details-repository',
@@ -23,14 +17,10 @@ export class DetailsRepositoryComponent implements OnInit {
   latestCommit: any;
   commitId: any;
   constructor(private route: ActivatedRoute,
-<<<<<<< HEAD
-    private githubService: GithubService) {
-=======
     private githubService: GithubService,
     private loadingService: LoadingService,
     private dialog: MatDialog,
     ) {
->>>>>>> 01374d7 (update test)
     route.queryParams.subscribe((params) => {
       this.repositoryName = params["repositoryName"];
       this.username = params["username"];
@@ -38,13 +28,6 @@ export class DetailsRepositoryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-<<<<<<< HEAD
-    this.githubService.getLatestCommit(this.repositoryName, this.username).pipe(
-    ).subscribe(
-      (res) => {
-        console.log(res)
-        this.latestCommit = Object.values(res).slice(0,10);
-=======
     this.loadingService.showLoading();
     this.githubService.getLatestCommit(this.repositoryName, this.username).pipe(
     ).subscribe(
@@ -65,7 +48,6 @@ export class DetailsRepositoryComponent implements OnInit {
             },
           },
         });
->>>>>>> 01374d7 (update test)
       }
       )
   }
@@ -73,15 +55,6 @@ export class DetailsRepositoryComponent implements OnInit {
   clkCommit(url: string){
     console.log(url)
     window.open(url, '_blank');
-<<<<<<< HEAD
-    // this.showUserRepository = false;
-    // console.log("clkRepository", repositoryName)
-    // let navigationExtras: NavigationExtras = {
-		// 	queryParams: { repositoryName: repositoryName, username: this.username},
-		// };
-    // this.router.navigate(['/details-repository'], navigationExtras);
-=======
->>>>>>> 01374d7 (update test)
   }
 
 }

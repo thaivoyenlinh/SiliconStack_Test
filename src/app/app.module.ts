@@ -11,10 +11,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { UserRepositoryComponent } from './components/user-repository/user-repository.component';
 import { DetailsRepositoryComponent } from './components/details-repository/details-repository.component';
 import { LoadingComponent } from './components/loading/loading.component';
-<<<<<<< HEAD
-=======
 import { ToastMessageComponent } from './components/toast-message/toast-message.component';
->>>>>>> 01374d7 (update test)
 // import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
@@ -25,10 +22,7 @@ import { ToastMessageComponent } from './components/toast-message/toast-message.
     UserRepositoryComponent,
     DetailsRepositoryComponent,
     LoadingComponent,
-<<<<<<< HEAD
-=======
     ToastMessageComponent,
->>>>>>> 01374d7 (update test)
     // SearchComponent
   ],
   imports: [
