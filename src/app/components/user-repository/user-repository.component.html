@@ -1,0 +1,28 @@
+<div class="repository" >
+  <!-- <mat-toolbar class="header"> -->
+    <div class="header">
+      <span >Repositories</span>
+    </div>
+  <!-- </mat-toolbar> -->
+  
+  <mat-grid-list cols="2" rowHeight="150px" gutterSize="10px">
+    <mat-grid-tile *ngFor="let repository of githubUserRepositories">
+      <mat-card class="card" >
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title class="repository-name"><span (click)="clkRepository(repository.name)">{{repository.name}}</span></mat-card-title>
+            <mat-card-subtitle>Issue <span class="issue-number">{{repository.open_issues}}</span></mat-card-subtitle>
+            <div class="right-header">
+              <img src="../../../assets/star-outline-svgrepo-com.svg" width="15px" height="15px" class="star-icon">
+              <span>Star <span class="star-number">{{repository.stargazers_count}}</span></span>
+            </div>
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          {{repository.description}}
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+

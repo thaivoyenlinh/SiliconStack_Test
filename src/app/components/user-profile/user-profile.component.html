@@ -1,0 +1,13 @@
+<mat-card class="example-card" (click)="clkOnCard()" >
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{githubUserProfile.name}}</mat-card-title>
+      <mat-card-subtitle>Repository: {{githubUserProfile.public_repos}}</mat-card-subtitle>
+      <img mat-card-sm-image src="{{githubUserProfile.avatar_url}}"  alt="Image of {{githubUserProfile.name}}">
+    </mat-card-title-group>
+  </mat-card-header>
+</mat-card>
+
+<!-- <app-user-repository *ngIf="showRepositories" [userRepositories] = "githubUserRepositories" ></app-user-repository> -->
+
+

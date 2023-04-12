@@ -1,0 +1,80 @@
+.repository{
+  // margin-top: 5%;
+
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+
+  .header{
+    font-weight: 600;
+    font-size: 30px;
+    margin: 25px 0;
+    color: rgb(118, 115, 115);
+    // color: white;
+    // background-image: linear-gradient(
+    //       to right,
+    //        rgb(190, 186, 186) 15%,
+    //        rgb(216, 210, 210)
+          
+    //   );
+    // margin-bottom: 2%;
+  }
+
+  
+
+  .card {
+    color: rgb(67, 67, 249);
+    width: 100%;
+    min-height: 70%;
+    border: 1px solid rgb(238, 235, 235);
+
+    mat-card-header {
+      display: block;
+    }
+
+<<<<<<< HEAD
+=======
+    mat-card-content{
+      color: rgb(58, 58, 58);
+    }
+
+>>>>>>> 01374d7 (update test)
+    .repository-name:hover{
+      text-decoration: underline;
+    }
+
+    .right-header{
+      color: gray;
+
+      .star-icon{
+        margin-right: 7px;
+      }
+
+      .star-number{
+        padding: 1px 10px;
+        border-radius: 10px;
+        background-color: #dcd7d7;
+        color: #3a3939;
+        font-weight: 600;
+      }
+    }
+
+    .issue-number{
+      padding: 1px 10px;
+      border-radius: 10px;
+      background-color: #dcd7d7;
+      color: #3a3939;
+      font-weight: 600;
+    }
+
+    
+  }
+}
+
+::ng-deep .mat-grid-tile-content{
+  height: 88.48% !important;
+}
+
+.mat-card-subtitle{
+  margin-bottom: 10px;
+}

@@ -1,0 +1,11 @@
+<div class="search">
+  <form>
+    <mat-form-field appearance="outline">
+      <mat-label>Github user</mat-label>
+      <input [(ngModel)]="githubUsernameQuery" name="user" matInput placeholder="Placeholder">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="submit()">Search</button>
+  </form>
+  <app-user-profile *ngIf="showUserProfile" [githubUserProfile] = "githubUserProfile"></app-user-profile>
+</div>
+

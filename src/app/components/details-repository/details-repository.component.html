@@ -1,0 +1,26 @@
+<div class="repository" >
+  <!-- <mat-toolbar class="header"> -->
+    <div class="header">
+      <span>Commit</span>
+    </div>
+  <!-- </mat-toolbar> -->
+  
+  <mat-grid-list cols="1" rowHeight="150px" >
+    <mat-grid-tile *ngFor="let commit of latestCommit">
+      <mat-card class="card" (click)="clkCommit(commit.html_url)">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title class="repository-name"><span >{{commit.commit.author.name}}</span></mat-card-title>
+            <div class="right-header">
+              <span>Commit <span>{{commit.sha}}</span></span>
+            </div> 
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          {{commit.commit.message}}
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
